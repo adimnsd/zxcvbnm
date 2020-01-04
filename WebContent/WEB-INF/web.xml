@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>jsp_xm_news</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 配置过滤器 -->
+  <filter>
+  	<filter-name>NewsFilter</filter-name>
+  	<filter-class>com.news.filter.NewsFilter</filter-class>
+  	<init-param>
+  		<param-name>encoding</param-name>
+  		<param-value>UTF-8</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>contentType</param-name>
+  		<param-value>text/html; charset=UTF-8</param-value>
+  	</init-param>
+  </filter>
+  <filter-mapping>
+  	<filter-name>NewsFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <!-- 主页面 -->
+  <servlet>
+  	<servlet-name>NewsMainServlet</servlet-name>
+  	<servlet-class>com.news.servlet.NewsMainServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>NewsMainServlet</servlet-name>
+  	<url-pattern>/newsMain</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 查看评论 -->
+  <servlet>
+  	<servlet-name>NewsCkplServlet</servlet-name>
+  	<servlet-class>com.news.servlet.NewsCkplServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>NewsCkplServlet</servlet-name>
+  	<url-pattern>/newsCkpl</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 获取id -->
+  <servlet>
+  	<servlet-name>NewXzid</servlet-name>
+  	<servlet-class>com.news.servlet.NewXzid</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>NewXzid</servlet-name>
+  	<url-pattern>/newsId</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 新增评论 -->
+  <servlet>
+  	<servlet-name>NewsXzplServlet</servlet-name>
+  	<servlet-class>com.news.servlet.NewsXzplServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>NewsXzplServlet</servlet-name>
+  	<url-pattern>/newsXzpl</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 删除 -->
+  <servlet>
+  	<servlet-name>NewsScServlet</servlet-name>
+  	<servlet-class>com.news.servlet.NewsScServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>NewsScServlet</servlet-name>
+  	<url-pattern>/newsSc</url-pattern>
+  </servlet-mapping>
+</web-app>
