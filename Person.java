@@ -8,7 +8,7 @@ public class Person {
 
 	public void setAge(int age) throws Exception{
 		if(age>100||age<1) {
-			throw new Exception("年龄必须在1到100之间");
+			throw new Exception("年龄必须在1到100间");
 		}else {
 			this.age = age;
 		}
