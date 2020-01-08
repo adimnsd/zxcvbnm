@@ -5,7 +5,9 @@ package zxcvbnm.Entity;
  *
  */
 public class HomestateEntity {
+	//·¿ÎÝ×´Ì¬id
 	private int homeState_id;
+	//·¿ÎÝ×´Ì¬
 	private String homeStateS;
 	public int getHomeState_id() {
 		return homeState_id;

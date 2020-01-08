@@ -15,6 +15,12 @@ public class DuerefundEntity {
 	private CustomertableEntity customerTable_id;
 	//ÍË¶©¶©µ¥
 	private DueorderEntity dueOrder_id;
+	public DueorderEntity getDueOrder_id() {
+		return dueOrder_id;
+	}
+	public void setDueOrder_id(DueorderEntity dueOrder_id) {
+		this.dueOrder_id = dueOrder_id;
+	}
 	public int getDueRefund_id() {
 		return dueRefund_id;
 	}
